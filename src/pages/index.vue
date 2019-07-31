@@ -1,14 +1,26 @@
 <template>
-    <div class="home">
+    <div class="home"
+         :style="{background: bgColor}"
+         @click="onChangeBackground"
+    >
         <div class="home__text">
-            
+
         </div>
     </div>
 </template>
 
 <script>
+    import { getRandomRGBColor } from '@/utils';
     export default {
-        name: "index"
+        name: "index",
+        data: () => ({
+            bgColor: getRandomRGBColor()
+        }),
+        methods: {
+            onChangeBackground() {
+                this.bgColor = getRandomRGBColor()
+            }
+        }
     }
 </script>
 
