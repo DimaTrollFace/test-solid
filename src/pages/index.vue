@@ -4,7 +4,7 @@
          @click="onChangeBackground"
     >
         <div class="home__text">
-
+            <h1>Hey there</h1>
         </div>
     </div>
 </template>
@@ -29,5 +29,11 @@
         width: 100vw;
         height: 100vh;
         padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home__text{
+        user-select: none;
     }
 </style>
